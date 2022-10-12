@@ -1,15 +1,20 @@
 <h2>Products</h2>
 
+<!-- ngFor directive -->
 <div *ngFor="let product of products">
   <h3>
+    <!-- Property Binding -->
     <a [title]="product.name + ' details'">
       {{ product.name }}
     </a>
   </h3>
 
-  <p *ngIf="product.description">
-    Description: {{ product.description }}
-  </p>
+  <p *ngIf="product.description">Description: {{ product.description }}</p>
+
+  <!-- Event Binding -->
+  <button type="button" (click)="share()">Share</button>
+
+  <app-product-alerts [product]="product"> </app-product-alerts>
 </div>
 
 <!-- 
