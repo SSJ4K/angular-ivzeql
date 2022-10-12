@@ -14,7 +14,11 @@
   <!-- Event Binding -->
   <button type="button" (click)="share()">Share</button>
 
-  <app-product-alerts [product]="product"> </app-product-alerts>
+  <!-- Passing value to child -->
+  <app-product-alerts 
+  [product]="product" 
+  (notify)="onNotify()"> <!-- Outputting event to parent -->
+  </app-product-alerts>
 </div>
 
 <!-- 
