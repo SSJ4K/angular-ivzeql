@@ -4,12 +4,12 @@
 <div *ngFor="let product of products">
   <h3>
     <!-- Property Binding -->
-    <a [title]="product.name + ' details'">
+    <a [title]="product.name + ' details'" [routerLink]="['/products', product.id]">
       {{ product.name }}
     </a>
   </h3>
 
-  <p *ngIf="product.description">Description: {{ product.description }}</p>
+  <!--<p *ngIf="product.description">Description: {{ product.description }}</p>-->
 
   <!-- Event Binding -->
   <button type="button" (click)="share()">Share</button>
